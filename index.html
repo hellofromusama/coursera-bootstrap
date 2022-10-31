@@ -36,7 +36,7 @@
                                 class="fa fa-lg fa-card"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton">
                         <span class="fa fa-lg fa-user"></span> Login
                     </a>
                 </span>
@@ -178,8 +178,7 @@
                 <!--a type="button" class="btn btn-warning btn-block"
                        data-toggle="tooltip" title="Or Call us at +852 12345678"
                        data-placement="bottom" href="#reserveform">Reserve table</a -->
-                <a data-toggle="modal" data-target="#reserveModal" role="button" type="button"
-                    class="btn btn-warning btn-block">Reserve table</a>
+                    <a type="button" class="btn btn-warning btn-sm btn-block" id="reserveButton">Reserve Table</a>
             </div>
         </div>
     </div>
@@ -376,6 +375,13 @@
                         $("#carouselButton").children("span").removeClass('fa-play');
                         $("#carouselButton").children("span").addClass('fa-pause');
                     }
+                });
+                    $("#loginButton").click(function () {
+                    $("#loginModal").modal('show');
+                });
+
+                $("#reserveButton").click(function () {
+                    $("#reserveModal").modal('show');
                 });
             });
         </script>
